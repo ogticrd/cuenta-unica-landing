@@ -22,7 +22,8 @@ FROM base as deps
 RUN apk add --no-cache libc6-compat
 
 COPY package*.json ./
-RUN npm install --only=production && npm cache clean --force
+RUN npm install --omit=dev --ignore-scripts
+RUN npm cache clean --force
 
 # ===================== Build Stage =====================
 # Rebuild the source code only when needed

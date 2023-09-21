@@ -15,6 +15,11 @@ ENV NEXT_TELEMETRY_DISABLED=1
 
 WORKDIR ${WORK_DIR}
 
+# ==== App specific variables
+
+ARG CONTENT_JSON_URL
+ENV CONTENT_JSON_URL=${CONTENT_JSON_URL}
+
 # ===================== Install Deps =====================
 FROM base as deps
 

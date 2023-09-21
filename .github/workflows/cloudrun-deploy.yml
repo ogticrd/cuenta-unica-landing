@@ -36,7 +36,7 @@ jobs:
 
   deploy:
     name: Deploy to Cloud Run
-    needs: ["versioning"]
+    needs: ['versioning']
     timeout-minutes: 10
     runs-on: ubuntu-latest
     permissions:
@@ -65,6 +65,8 @@ jobs:
           image: ${{ inputs.image }}
           service: ${{ env.GITHUB_REPOSITORY_NAME_PART_SLUG }}-${{ needs.versioning.outputs.version || env.GITHUB_HEAD_REF_SLUG || env.GITHUB_REF_SLUG }}
           region: ${{ inputs.region }}
+          env_vars: |
+            CONTENT_JSON_URL=${{ secrets.CONTENT_JSON_URL }},
 
       - name: Allow unauthenticated calls to the service
         run: |

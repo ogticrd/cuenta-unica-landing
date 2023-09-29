@@ -6,10 +6,16 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { IconButton, Typography } from '@mui/material';
 import Image from 'next/image';
+
 import { GridContainer, GridItem } from '../grid';
 import { theme } from '@/app/theme';
+import { Footer } from '@/app/types';
 
-export default function Index() {
+export default function Index({ data }: { data: Footer }) {
+  const handleSocialNetworkClick = (url: string) => () => {
+    window.open(url);
+  };
+
   return (
     <>
       <div
@@ -33,50 +39,48 @@ export default function Index() {
               <GridContainer>
                 <GridItem md={6} lg={3}>
                   <Typography fontWeight="500" fontSize={16} color="white">
-                    CONÓCENOS
+                    {data.knowUs.title}
                   </Typography>
                   <br />
                   <Typography color="white" fontWeight="400" fontSize="16">
-                    Oficina Gubernamental de Tecnologías de la Información y
-                    Comunicación (OGTIC)
+                    {data.knowUs.text}
                   </Typography>
                 </GridItem>
 
                 <GridItem md={6} lg={3}>
                   <Typography fontWeight="500" fontSize={16} color="white">
-                    CONTÁCTANOS
+                    {data.contact.title}
+                  </Typography>
+                  <br />
+                  {data.contact.items.map((item, index) => (
+                    <Typography
+                      color="white"
+                      fontWeight="400"
+                      fontSize="16"
+                      key={index}
+                    >
+                      {item}
+                    </Typography>
+                  ))}
+                </GridItem>
+
+                <GridItem md={6} lg={3}>
+                  <Typography fontWeight="500" fontSize={16} color="white">
+                    {data.search.title}
                   </Typography>
                   <br />
                   <Typography color="white" fontWeight="400" fontSize="16">
-                    Tel: (809)-286-1009
-                  </Typography>
-                  <Typography color="white" fontWeight="400" fontSize="16">
-                    Fax: (809)-732-5465
-                  </Typography>
-                  <Typography color="white" fontWeight="400" fontSize="16">
-                    info@ogtic.gob.do
+                    {data.search.text}
                   </Typography>
                 </GridItem>
 
                 <GridItem md={6} lg={3}>
                   <Typography fontWeight="500" fontSize={16} color="white">
-                    BÚSCANOS
+                    {data.info.title}
                   </Typography>
                   <br />
                   <Typography color="white" fontWeight="400" fontSize="16">
-                    Oficina Gubernamental de Tecnologías de la Información y
-                    Comunicación (OGTIC) Av. Rómulo Betancourt #311, Edificio
-                    Corporativo Vista 311, Santo Domingo, República Dominicana.
-                  </Typography>
-                </GridItem>
-
-                <GridItem md={6} lg={3}>
-                  <Typography fontWeight="500" fontSize={16} color="white">
-                    INFÓRMATE
-                  </Typography>
-                  <br />
-                  <Typography color="white" fontWeight="400" fontSize="16">
-                    Términos de Uso Política de Privacidad Preguntas Frecuentes
+                    {data.info.text}
                   </Typography>
                 </GridItem>
               </GridContainer>
@@ -111,7 +115,6 @@ export default function Index() {
                   alt="logo ogtic"
                   width="55"
                   height="29"
-                  // onClick={() => window.open("https://ogtic.gob.do/")}
                 />
               </div>
             </GridItem>
@@ -127,19 +130,39 @@ export default function Index() {
                   SÍGUENOS
                 </Typography>
 
-                <IconButton color="primary">
+                <IconButton
+                  color="primary"
+                  onClick={handleSocialNetworkClick(
+                    data.socialNetworks.facebook.url,
+                  )}
+                >
                   <FacebookIcon />
                 </IconButton>
 
-                <IconButton color="primary">
+                <IconButton
+                  color="primary"
+                  onClick={handleSocialNetworkClick(
+                    data.socialNetworks.youtube.url,
+                  )}
+                >
                   <YouTubeIcon />
                 </IconButton>
 
-                <IconButton color="primary">
+                <IconButton
+                  color="primary"
+                  onClick={handleSocialNetworkClick(
+                    data.socialNetworks.twitter.url,
+                  )}
+                >
                   <TwitterIcon />
                 </IconButton>
 
-                <IconButton color="primary">
+                <IconButton
+                  color="primary"
+                  onClick={handleSocialNetworkClick(
+                    data.socialNetworks.instagram.url,
+                  )}
+                >
                   <InstagramIcon />
                 </IconButton>
               </div>

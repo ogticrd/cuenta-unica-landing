@@ -1,18 +1,19 @@
 'use client';
 
-import Image from 'next/image';
 import styles from './styles.module.css';
-import { Container } from '../container';
-import { Typography } from '../typography';
-import { theme } from '@/app/theme';
-import { GridContainer, GridItem } from '../grid';
 
-export default function Index() {
+import Image from 'next/image';
+
+import { GridContainer, GridItem } from '../grid';
+import { Typography } from '../typography';
+import { Container } from '../container';
+import { Benefits } from '@/app/types';
+export default function Index({ data }: { data: Benefits }) {
   return (
     <Container>
       <div className={styles.content}>
         <Typography gutterBottom variant="h1">
-          Beneficios
+          {data.title}
         </Typography>
         <div className={styles.content_info}>
           <GridContainer alignItems="center">
@@ -27,29 +28,15 @@ export default function Index() {
             </GridItem>
             <GridItem lg={6}>
               <Typography gutterBottom variant="h2">
-                Acceso sencillo
+                {data.subTitleOne}
               </Typography>
-              <Typography variant="body2">
-                No necesitas crear cuentas en varios sitios web gubernamentales.
-                Con tu Cuenta Única Ciudadana, solo tendrás que{' '}
-                <span style={{ color: theme.palette.secondary.main }}>
-                  <b>iniciar sesión</b>
-                </span>{' '}
-                una vez para usar muchos servicios digitales diferentes.
-              </Typography>
+              <Typography variant="body2">{data.descriptionOne}</Typography>
             </GridItem>
             <GridItem lg={6}>
               <Typography gutterBottom variant="h2">
-                Acceso sencillo
+                {data.subTitleTwo}
               </Typography>
-              <Typography variant="body2">
-                No necesitas crear cuentas en varios sitios web gubernamentales.
-                Con tu Cuenta Única Ciudadana, solo tendrás que{' '}
-                <span style={{ color: theme.palette.secondary.main }}>
-                  <b>iniciar sesión</b>
-                </span>{' '}
-                una vez para usar muchos servicios digitales diferentes.
-              </Typography>
+              <Typography variant="body2">{data.descriptionTwo}</Typography>
             </GridItem>
             <GridItem lg={6}>
               <Image

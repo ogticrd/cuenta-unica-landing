@@ -1,0 +1,51 @@
+.content {
+  width: 100%;
+  height: 644px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eff7ff;
+}
+
+.layer_point {
+  width: 244px;
+  height: 644px;
+  background: url('/layer-point1.svg');
+  background-position: center;
+  position: absolute;
+  left: 0%;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+  /* background-size: cover; */
+}
+
+.layer_logo {
+  width: 642px;
+  height: 644px;
+  background: url('/layer-logo1.svg');
+  background-position: center;
+  position: absolute;
+  right: 0%;
+  background-repeat: no-repeat;
+  z-index: 0;
+  background-size: cover;
+}
+
+.info {
+  z-index: 1;
+  position: sticky;
+}
+
+@media only screen and (max-width: 1400px) {
+  .layer_logo {
+    width: 342px;
+    height: 344px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .layer_logo {
+    display: none;
+  }
+}

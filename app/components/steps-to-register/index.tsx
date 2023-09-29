@@ -1,27 +1,27 @@
 'use client';
 
-import { theme } from '@/app/theme';
-import { Container } from '../container';
-import { Typography } from '../typography';
 import styles from './styles.module.css';
-import Image from 'next/image';
-// import { GridContainer, GridItem } from "@ogticrd/ui-kit"
-import { GridContainer, GridItem } from '../grid';
 
+import { Typography } from '../typography';
+import { Container } from '../container';
+import { theme } from '@/app/theme';
 import Steps from './steps';
+import { StepsToRegister } from '@/app/types';
 
-export default function Index() {
+export default function Index({ data }: { data: StepsToRegister }) {
   return (
     <div className={styles.content}>
       <div className={styles.layer_logo} />
 
       <Container>
         <Typography variant="h1" color="#ffffff">
-          Pasos para{' '}
-          <span style={{ color: theme.palette.info.main }}>registrarnos</span>
+          {data.title + ' '}
+          <span style={{ color: theme.palette.info.main }}>
+            {data.titleBlue}
+          </span>
         </Typography>
 
-        <Steps />
+        <Steps steps={data.steps} />
       </Container>
     </div>
   );

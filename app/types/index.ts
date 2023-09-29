@@ -1,1 +1,1 @@
-export { type Content } from './content.type';
+export * from './content.type';

@@ -1,32 +1,37 @@
 'use client';
 
-import { theme } from '@/app/theme';
-import { Button } from '../button';
-import { Container } from '../container';
-import { Typography } from '../typography';
-// import { Button } from "@ogticrd/ui-kit"
-
 import styles from './styles.module.css';
+
 import Image from 'next/image';
 
-export default function Index() {
+import { Typography } from '../typography';
+import { Container } from '../container';
+import { theme } from '@/app/theme';
+import { Button } from '../button';
+import { Hero } from '@/app/types';
+
+export default function Index({ data }: { data: Hero }) {
+  const handleClick = () => {
+    window.location.href = data.button.href;
+  };
+
   return (
     <Container maxWidth="lg">
       <div className={styles.content}>
         <div className={styles.content_info}>
           <Typography gutterBottom variant="h1">
-            ¡Bienvenido al Servicio de Autenticación <br />
+            {data.title} <br />
             <span style={{ color: theme.palette.secondary.main }}>
-              de Cuenta Única!
+              {data.titleRed}
             </span>
           </Typography>
           <Typography gutterBottom variant="body1">
-            Una manera fácil y cómoda de identificarte, para realizar trámites
-            desde tu computadora o celular sin necesidad de trasladarte a los
-            organismos gubernamentales.
+            {data.description}
           </Typography>
           <br />
-          <Button notFullWidth>Registrar Cuenta</Button>
+          <Button notFullWidth onClick={handleClick}>
+            {data.button.label}
+          </Button>
         </div>
 
         <div>

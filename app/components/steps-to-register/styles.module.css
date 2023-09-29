@@ -1,0 +1,61 @@
+.content {
+  width: 100%;
+  padding: 50px 0;
+  background: #012e6c;
+  color: white;
+}
+
+.layer_logo {
+  width: 642px;
+  height: 644px;
+  background: url('/layer-logo2.svg');
+  background-position: center;
+  position: absolute;
+  right: 0%;
+  background-repeat: no-repeat;
+  margin: -106px 0;
+  /* background-size: cover; */
+}
+
+.info {
+  z-index: 10;
+  margin-top: 81px;
+}
+
+.info_subtitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.steps_info {
+  margin-bottom: 82px;
+}
+
+.number {
+  min-width: 68px;
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  padding: 10px;
+  text-align: center;
+  margin-right: 19px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .image {
+    width: 450px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .layer_logo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .image {
+    width: 250px;
+  }
+}

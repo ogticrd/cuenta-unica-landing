@@ -1,0 +1,25 @@
+.content {
+  width: 100%;
+  min-height: 774px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_info {
+  background: url('/layer-point2.svg');
+  background-position: center;
+  padding: 40px 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .image {
+    width: 362px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .image {
+    display: none;
+  }
+}

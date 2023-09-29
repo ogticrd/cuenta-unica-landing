@@ -1,0 +1,20 @@
+.content {
+  width: 100%;
+  padding: 50px 0px;
+}
+
+.content_info {
+  background: url('/layer-point2.svg');
+  background-position: center;
+}
+
+.image {
+  width: 500px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .image {
+    width: 362px;
+    height: auto;
+  }
+}

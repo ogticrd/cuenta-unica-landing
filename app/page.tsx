@@ -13,7 +13,9 @@ import Footer from './components/footer';
 
 export default async function Home() {
   const contentUrl = process.env.CONTENT_JSON_URL as string;
-  const response = await fetch(contentUrl);
+  const response = await fetch(contentUrl, {
+    cache: 'no-store',
+  });
   const content: Content = await response.json();
 
   return (

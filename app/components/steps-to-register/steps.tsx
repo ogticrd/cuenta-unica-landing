@@ -19,7 +19,12 @@ export default function Steps({ steps }: { steps: Step[] }) {
               <div className={styles.info_subtitle}>
                 <div
                   className={styles.number}
-                  style={{ background: theme.palette.info.main }}
+                  style={{
+                    background:
+                      index === 3
+                        ? theme.palette.secondary.main
+                        : theme.palette.info.main,
+                  }}
                 >
                   <Typography variant="subtitle2" color="#ffffff">
                     {index + 1}
@@ -41,7 +46,7 @@ export default function Steps({ steps }: { steps: Step[] }) {
         <GridItem lg={6}>
           <Image
             src="/layer-steps.svg"
-            alt="logo"
+            alt="Layer"
             className={styles.image}
             width={735}
             height={543}

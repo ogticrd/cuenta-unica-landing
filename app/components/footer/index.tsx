@@ -30,13 +30,23 @@ export default function Index({ data }: { data: Footer }) {
           }}
         >
           <GridContainer spacing={4}>
-            <GridItem md={12} lg={3}>
+            <GridItem md={12} lg={2}>
               <div style={{ display: 'flex' }}>
-                <Image src="/logo-gob.svg" alt="logo" width="241" height="90" />
+                <Image src="/logo-gob.svg" alt="logo" width="198" height="80" />
               </div>
             </GridItem>
-            <GridItem md={12} lg={9}>
-              <GridContainer>
+            <GridItem md={12} lg={2}>
+              <div style={{ display: 'flex' }}>
+                <Image
+                  src="/logo-white.svg"
+                  alt="logo"
+                  width="166"
+                  height="82"
+                />
+              </div>
+            </GridItem>
+            <GridItem md={12} lg={8}>
+              <GridContainer spacing={4}>
                 <GridItem md={6} lg={3}>
                   <Typography fontWeight="500" fontSize={16} color="white">
                     {data.knowUs.title}

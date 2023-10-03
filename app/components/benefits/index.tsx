@@ -40,7 +40,37 @@ export default function Index({ data }: { data: Benefits }) {
             </GridItem>
             <GridItem lg={6}>
               <Image
-                src="/benefits/layer1.svg"
+                src="/benefits/layer2.svg"
+                alt="imagen"
+                className={styles.image}
+                width={680}
+                height={510}
+              />
+            </GridItem>
+            <GridItem lg={6}>
+              <Image
+                src="/benefits/layer3.svg"
+                alt="imagen"
+                className={styles.image}
+                width={680}
+                height={510}
+              />
+            </GridItem>
+            <GridItem lg={6}>
+              <Typography gutterBottom variant="h2">
+                {data.subTitleThree}
+              </Typography>
+              <Typography variant="body2">{data.descriptionThree}</Typography>
+            </GridItem>
+            <GridItem lg={6}>
+              <Typography gutterBottom variant="h2">
+                {data.subTitleFour}
+              </Typography>
+              <Typography variant="body2">{data.descriptionFour}</Typography>
+            </GridItem>
+            <GridItem lg={6}>
+              <Image
+                src="/benefits/layer4.svg"
                 alt="imagen"
                 className={styles.image}
                 width={680}

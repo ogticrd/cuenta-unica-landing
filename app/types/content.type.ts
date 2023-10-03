@@ -1,5 +1,12 @@
 import { type } from 'os';
 
+export type Navbar = {
+  button: {
+    label: string;
+    href: string;
+  };
+};
+
 export type Hero = {
   title: string;
   titleRed: string;
@@ -22,6 +29,10 @@ export type Benefits = {
   descriptionOne: string;
   subTitleTwo: string;
   descriptionTwo: string;
+  subTitleThree: string;
+  descriptionThree: string;
+  subTitleFour: string;
+  descriptionFour: string;
 };
 
 export type Step = {
@@ -89,6 +100,7 @@ export type Footer = {
 };
 
 export type Content = {
+  navbar: Navbar;
   hero: Hero;
   description: Description;
   benefits: Benefits;

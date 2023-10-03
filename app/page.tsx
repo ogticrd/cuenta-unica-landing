@@ -17,7 +17,7 @@ export default async function Home() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar data={content.navbar} />
       <Hero data={content.hero} />
       <Description data={content.description} />
       <Benefits data={content.benefits} />

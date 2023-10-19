@@ -8,11 +8,37 @@
   background-position: center;
 }
 
+.items,
+.items_reverse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
 .image {
   width: 500px;
 }
 
+@media only screen and (max-width: 800px) {
+  .items {
+    display: block;
+    text-align: center;
+  }
+
+  .items_reverse {
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column-reverse;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
+  .items,
+  .items_reverse {
+    margin: 80px 0;
+  }
+
   .image {
     width: 300px;
     height: auto;

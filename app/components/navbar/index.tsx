@@ -34,7 +34,7 @@ export default function Index({ data }: { data: Navbar }) {
             <AppsIcon
               fontSize="large"
               color="primary"
-              sx={{ marginRight: '24px' }}
+              sx={{ marginRight: '24px', display: 'none' }}
             />
             <Button notFullWidth variant="outlined" onClick={handleClick}>
               {data?.button.label}

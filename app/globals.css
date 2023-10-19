@@ -1,5 +1,12 @@
 @media only screen and (max-width: 450px) {
   h1 {
-    font-size: 50px !important;
+    font-size: 40px !important;
+    line-height: 70px !important;
+    font-weight: bold !important;
+  }
+
+  h2 {
+    font-size: 35px !important;
+    line-height: 50px !important;
   }
 }

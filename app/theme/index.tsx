@@ -56,6 +56,14 @@ export const theme = createTheme({
   },
 
   components: {
+    MuiButton: {
+      defaultProps: {
+        sx: {
+          borderRadius: '60px',
+          height: '40px',
+        },
+      },
+    },
     MuiCard: {
       styleOverrides: {
         root: {

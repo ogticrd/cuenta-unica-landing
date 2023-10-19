@@ -19,6 +19,10 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .content {
+    display: block;
+    min-height: auto;
+  }
   .image {
     display: none;
   }

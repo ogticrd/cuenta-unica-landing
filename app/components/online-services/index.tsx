@@ -13,7 +13,7 @@ import { OnlineServices } from '@/app/types';
 
 export default function Index({ data }: { data: OnlineServices }) {
   const handleClick = () => {
-    window.location.href = data.button.href;
+    window.location.href = `mailto:${data.button.href}`;
   };
 
   return (

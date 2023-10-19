@@ -17,65 +17,77 @@ export default function Index({ data }: { data: Benefits }) {
         </Typography>
         <div className={styles.content_info}>
           <GridContainer alignItems="center">
-            <GridItem lg={6}>
-              <Image
-                src="/benefits/layer1.svg"
-                alt="imagen"
-                className={styles.image}
-                width={680}
-                height={510}
-              />
+            <GridItem lg={12} md={12}>
+              <div className={styles.items}>
+                <Image
+                  src="/benefits/layer1.svg"
+                  alt="imagen"
+                  className={styles.image}
+                  width={680}
+                  height={510}
+                />
+                <div>
+                  <Typography gutterBottom variant="h2">
+                    {data.subTitleOne}
+                  </Typography>
+                  <Typography variant="body2">{data.descriptionOne}</Typography>
+                </div>
+              </div>
             </GridItem>
-            <GridItem lg={6}>
-              <Typography gutterBottom variant="h2">
-                {data.subTitleOne}
-              </Typography>
-              <Typography variant="body2">{data.descriptionOne}</Typography>
+            <GridItem lg={12} md={12}>
+              <div className={styles.items_reverse}>
+                <div>
+                  <Typography gutterBottom variant="h2">
+                    {data.subTitleTwo}
+                  </Typography>
+                  <Typography variant="body2">{data.descriptionTwo}</Typography>
+                </div>
+                <Image
+                  src="/benefits/layer2.svg"
+                  alt="imagen"
+                  className={styles.image}
+                  width={680}
+                  height={510}
+                />
+              </div>
             </GridItem>
-            <GridItem lg={6}>
-              <Typography gutterBottom variant="h2">
-                {data.subTitleTwo}
-              </Typography>
-              <Typography variant="body2">{data.descriptionTwo}</Typography>
+            <GridItem lg={12} md={12}>
+              <div className={styles.items}>
+                <Image
+                  src="/benefits/layer3.svg"
+                  alt="imagen"
+                  className={styles.image}
+                  width={680}
+                  height={510}
+                />
+                <div>
+                  <Typography gutterBottom variant="h2">
+                    {data.subTitleThree}
+                  </Typography>
+                  <Typography variant="body2">
+                    {data.descriptionThree}
+                  </Typography>
+                </div>
+              </div>
             </GridItem>
-            <GridItem lg={6}>
-              <Image
-                src="/benefits/layer2.svg"
-                alt="imagen"
-                className={styles.image}
-                width={680}
-                height={510}
-              />
-            </GridItem>
-            <GridItem lg={6}>
-              <Image
-                src="/benefits/layer3.svg"
-                alt="imagen"
-                className={styles.image}
-                width={680}
-                height={510}
-              />
-            </GridItem>
-            <GridItem lg={6}>
-              <Typography gutterBottom variant="h2">
-                {data.subTitleThree}
-              </Typography>
-              <Typography variant="body2">{data.descriptionThree}</Typography>
-            </GridItem>
-            <GridItem lg={6}>
-              <Typography gutterBottom variant="h2">
-                {data.subTitleFour}
-              </Typography>
-              <Typography variant="body2">{data.descriptionFour}</Typography>
-            </GridItem>
-            <GridItem lg={6}>
-              <Image
-                src="/benefits/layer4.svg"
-                alt="imagen"
-                className={styles.image}
-                width={680}
-                height={510}
-              />
+            <GridItem lg={12} md={12}>
+              <div className={styles.items_reverse}>
+                <div>
+                  <Typography gutterBottom variant="h2">
+                    {data.subTitleFour}
+                  </Typography>
+                  <Typography variant="body2">
+                    {data.descriptionFour}
+                  </Typography>
+                </div>
+                <Image
+                  src="/benefits/layer4.svg"
+                  alt="imagen"
+                  className={styles.image}
+                  width={680}
+                  height={510}
+                />
+              </div>
             </GridItem>
           </GridContainer>
         </div>

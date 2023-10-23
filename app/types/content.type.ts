@@ -99,6 +99,11 @@ export type Footer = {
   socialNetworks: SocialNetworks;
 };
 
+export type Questions = {
+  question: string;
+  answer: string;
+};
+
 export type Content = {
   navbar: Navbar;
   hero: Hero;
@@ -106,5 +111,6 @@ export type Content = {
   benefits: Benefits;
   stepsToRegister: StepsToRegister;
   onlineServices: OnlineServices;
+  questions: Questions[];
   footer: Footer;
 };

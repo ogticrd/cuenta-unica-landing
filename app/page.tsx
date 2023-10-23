@@ -1,12 +1,10 @@
 import { Content } from './types';
 
-import StepsToRegister from './components/steps-to-register';
-import OnlineServices from './components/online-services';
+import Hero from './components/hero';
 import Description from './components/description';
 import Benefits from './components/benefits';
-import Footer from './components/footer';
-import Navbar from './components/navbar';
-import Hero from './components/hero';
+import StepsToRegister from './components/steps-to-register';
+import OnlineServices from './components/online-services';
 
 export default async function Home() {
   const contentUrl = process.env.CONTENT_JSON_URL as string;
@@ -17,13 +15,11 @@ export default async function Home() {
 
   return (
     <div>
-      <Navbar data={content.navbar} />
       <Hero data={content.hero} />
       <Description data={content.description} />
       <Benefits data={content.benefits} />
       <StepsToRegister data={content.stepsToRegister} />
       <OnlineServices data={content.onlineServices} />
-      <Footer data={content.footer} />
     </div>
   );
 }

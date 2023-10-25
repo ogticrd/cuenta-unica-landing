@@ -143,7 +143,7 @@ export default function Index({ data }: { data: Footer }) {
                 <IconButton
                   color="primary"
                   onClick={handleSocialNetworkClick(
-                    data.socialNetworks.facebook.url,
+                    data.socialNetworks.facebook,
                   )}
                 >
                   <FacebookIcon />
@@ -152,7 +152,7 @@ export default function Index({ data }: { data: Footer }) {
                 <IconButton
                   color="primary"
                   onClick={handleSocialNetworkClick(
-                    data.socialNetworks.youtube.url,
+                    data.socialNetworks.youtube,
                   )}
                 >
                   <YouTubeIcon />
@@ -161,7 +161,7 @@ export default function Index({ data }: { data: Footer }) {
                 <IconButton
                   color="primary"
                   onClick={handleSocialNetworkClick(
-                    data.socialNetworks.twitter.url,
+                    data.socialNetworks.twitter,
                   )}
                 >
                   <TwitterIcon />
@@ -170,7 +170,7 @@ export default function Index({ data }: { data: Footer }) {
                 <IconButton
                   color="primary"
                   onClick={handleSocialNetworkClick(
-                    data.socialNetworks.instagram.url,
+                    data.socialNetworks.instagram,
                   )}
                 >
                   <InstagramIcon />

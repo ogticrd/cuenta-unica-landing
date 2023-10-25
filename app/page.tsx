@@ -1,29 +1,55 @@
-import { Content } from './types';
+import {
+  Benefits,
+  Content,
+  Description,
+  Footer,
+  Hero,
+  Navbar,
+  OnlineServices,
+  StepsToRegister,
+} from './types';
 
-import StepsToRegister from './components/steps-to-register';
-import OnlineServices from './components/online-services';
-import Description from './components/description';
-import Benefits from './components/benefits';
-import Footer from './components/footer';
-import Navbar from './components/navbar';
-import Hero from './components/hero';
+import StepsToRegisterComponent from './components/steps-to-register';
+import OnlineServicesComponent from './components/online-services';
+import DescriptionComponent from './components/description';
+import BenefitsComponent from './components/benefits';
+import FooterComponent from './components/footer';
+import NavbarComponent from './components/navbar';
+import HeroComponent from './components/hero';
+import client from '@/tina/__generated__/client';
 
 export default async function Home() {
-  const contentUrl = process.env.CONTENT_JSON_URL as string;
-  const response = await fetch(contentUrl, {
-    cache: 'no-store',
+  const navBarData = await client.queries.navbar({ relativePath: 'navbar.md' });
+  const heroData = await client.queries.hero({ relativePath: 'hero.md' });
+  const descriptionData = await client.queries.description({
+    relativePath: 'description.md',
   });
-  const content: Content = await response.json();
+  const benefitsData = await client.queries.benefits({
+    relativePath: 'benefits.md',
+  });
+  const stepsToRegisterData = await client.queries.stepsToRegister({
+    relativePath: 'stepsToRegister.md',
+  });
+  const onlineServicesData = await client.queries.onlineServices({
+    relativePath: 'onlineServices.md',
+  });
+  const footerData = await client.queries.footer({ relativePath: 'footer.md' });
 
   return (
     <div>
-      <Navbar data={content.navbar} />
-      <Hero data={content.hero} />
-      <Description data={content.description} />
-      <Benefits data={content.benefits} />
-      <StepsToRegister data={content.stepsToRegister} />
-      <OnlineServices data={content.onlineServices} />
-      <Footer data={content.footer} />
+      <NavbarComponent data={navBarData.data.navbar as Navbar} />
+      <HeroComponent data={heroData.data.hero as Hero} />
+      <DescriptionComponent
+        data={descriptionData.data.description as Description}
+      />
+      <BenefitsComponent data={benefitsData.data.benefits as Benefits} />
+      <StepsToRegisterComponent
+        data={stepsToRegisterData.data.stepsToRegister as StepsToRegister}
+      />
+      <OnlineServicesComponent
+        data={onlineServicesData.data.onlineServices as OnlineServices}
+      />
+      <FooterComponent data={footerData.data.footer as Footer} />
     </div>
   );
 }

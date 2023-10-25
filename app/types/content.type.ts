@@ -25,14 +25,11 @@ export type Description = {
 
 export type Benefits = {
   title: string;
-  subTitleOne: string;
-  descriptionOne: string;
-  subTitleTwo: string;
-  descriptionTwo: string;
-  subTitleThree: string;
-  descriptionThree: string;
-  subTitleFour: string;
-  descriptionFour: string;
+  benefits: {
+    title: string;
+    description: string;
+    image: string;
+  }[];
 };
 
 export type Step = {
@@ -77,18 +74,10 @@ export type Info = {
 };
 
 export type SocialNetworks = {
-  facebook: {
-    url: string;
-  };
-  youtube: {
-    url: string;
-  };
-  twitter: {
-    url: string;
-  };
-  instagram: {
-    url: string;
-  };
+  facebook: string;
+  youtube: string;
+  twitter: string;
+  instagram: string;
 };
 
 export type Footer = {

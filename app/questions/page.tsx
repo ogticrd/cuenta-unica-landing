@@ -12,9 +12,13 @@ export default async function QuestionsPage() {
   return (
     <div style={{ padding: '60px 0' }}>
       <Container maxWidth="md">
+        <Typography color="primary" variant="h1" gutterBottom>
+          Preguntas frecuentes
+        </Typography>
+
         {questions.map((item: Questions, index) => (
           <div key={index}>
-            <Typography color="primary" variant="h4" gutterBottom>
+            <Typography color="primary" variant="h5" gutterBottom>
               {item?.question}
             </Typography>
             <Typography variant="body1" gutterBottom>

@@ -13,6 +13,8 @@ import { GridContainer, GridItem } from '../grid';
 import { theme } from '@/app/theme';
 import { Footer } from '@/app/types';
 
+import styles from './styles.module.css';
+
 export default function Index({ data }: { data: Footer }) {
   const handleSocialNetworkClick = (url: string) => () => {
     window.open(url);
@@ -91,19 +93,19 @@ export default function Index({ data }: { data: Footer }) {
                     {data.info.title}
                   </Typography>
                   <br />
-                  <Link href={'terms'}>
+                  <Link className={styles.link} href={'terms'}>
                     <Typography color="white" fontWeight="400" fontSize="16">
                       Términos de Uso
                     </Typography>
                   </Link>
 
-                  <Link href={'privacy-policy'}>
+                  <Link className={styles.link} href={'privacy-policy'}>
                     <Typography color="white" fontWeight="400" fontSize="16">
                       Política de Privacidad
                     </Typography>
                   </Link>
 
-                  <Link href={'questions'}>
+                  <Link className={styles.link} href={'questions'}>
                     <Typography color="white" fontWeight="400" fontSize="16">
                       Preguntas Frecuentes
                     </Typography>

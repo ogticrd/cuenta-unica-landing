@@ -1,15 +1,19 @@
 'use client';
 
+import Image from 'next/image';
+import Link from 'next/link';
+
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { IconButton, Typography } from '@mui/material';
-import Image from 'next/image';
 
 import { GridContainer, GridItem } from '../grid';
 import { theme } from '@/app/theme';
 import { Footer } from '@/app/types';
+
+import styles from './styles.module.css';
 
 export default function Index({ data }: { data: Footer }) {
   const handleSocialNetworkClick = (url: string) => () => {
@@ -89,9 +93,23 @@ export default function Index({ data }: { data: Footer }) {
                     {data.info.title}
                   </Typography>
                   <br />
-                  <Typography color="white" fontWeight="400" fontSize="16">
-                    {data.info.text}
-                  </Typography>
+                  <Link className={styles.link} href={'terms'}>
+                    <Typography color="white" fontWeight="400" fontSize="16">
+                      Términos de Uso
+                    </Typography>
+                  </Link>
+
+                  <Link className={styles.link} href={'privacy-policy'}>
+                    <Typography color="white" fontWeight="400" fontSize="16">
+                      Política de Privacidad
+                    </Typography>
+                  </Link>
+
+                  <Link className={styles.link} href={'questions'}>
+                    <Typography color="white" fontWeight="400" fontSize="16">
+                      Preguntas Frecuentes
+                    </Typography>
+                  </Link>
                 </GridItem>
               </GridContainer>
             </GridItem>

@@ -11,7 +11,7 @@
     "commitlint": "commitlint --edit"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
+    "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.11",
     "@ogticrd/ui-kit": "^0.0.3",

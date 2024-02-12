@@ -15,7 +15,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.11",
     "@ogticrd/ui-kit": "^0.0.3",
-    "@types/node": "20.7.1",
+    "@types/node": "20.11.17",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
     "eslint": "8.50.0",

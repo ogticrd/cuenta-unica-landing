@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { GoogleTagManagerBody, GoogleTagManagerHead } from '@thgh/next-gtm';
 
 import { Content } from './types';
 
@@ -30,6 +31,7 @@ export default async function RootLayout({
 
   return (
     <html lang="es">
+      <head>{GoogleTagManagerHead}</head>
       <body className={inter.className}>
         <ThemeProvider>
           <OfficialHeader />
@@ -37,6 +39,7 @@ export default async function RootLayout({
           {children}
           <Footer data={content.footer} />
         </ThemeProvider>
+        {GoogleTagManagerBody}
       </body>
     </html>
   );

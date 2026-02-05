@@ -12,7 +12,7 @@ import { Hero } from '@/app/types';
 
 export default function Index({ data }: { data: Hero }) {
   const handleClick = () => {
-    window.location.href = data.button.href;
+    window.open(data.button.href, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -21,7 +21,9 @@ export default function Index({ data }: { data: Hero }) {
         <div className={styles.content_info}>
           <Typography gutterBottom variant="h1">
             {data.title} <br />
-            <span style={{ color: theme.palette.secondary.main }}>
+            <span
+              style={{ color: theme.palette.secondary.main, fontWeight: 700 }}
+            >
               {data.titleRed}
             </span>
           </Typography>
@@ -39,7 +41,7 @@ export default function Index({ data }: { data: Hero }) {
             src="/hero.svg"
             alt="logo"
             className={styles.image}
-            width={762}
+            width={630}
             height={429}
           />
         </div>

@@ -11,7 +11,7 @@ import { Navbar } from '@/app/types';
 
 export default function Index({ data }: { data: Navbar }) {
   const handleClick = () => {
-    window.location.href = data.button.href;
+    window.open(data.button.href, '_blank', 'noopener,noreferrer');
   };
 
   return (

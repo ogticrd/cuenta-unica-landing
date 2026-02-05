@@ -33,23 +33,32 @@ export default function Index({ data }: { data: Footer }) {
             padding: '0px 24px',
           }}
         >
-          <GridContainer spacing={4}>
+          <GridContainer spacing={4} justifyContent="space-between">
             <GridItem md={12} lg={2}>
-              <div style={{ display: 'flex' }}>
-                <Image src="/logo-gob.svg" alt="logo" width="198" height="80" />
-              </div>
+              <GridContainer spacing={4}>
+                <GridItem md={12} lg={12}>
+                  <div style={{ display: 'flex' }}>
+                    <Image
+                      src="/logo-gob.svg"
+                      alt="logo"
+                      width="198"
+                      height="80"
+                    />
+                  </div>
+                </GridItem>
+                <GridItem md={12} lg={12}>
+                  <div style={{ display: 'flex' }}>
+                    <Image
+                      src="/logo-white.svg"
+                      alt="logo"
+                      width="166"
+                      height="82"
+                    />
+                  </div>
+                </GridItem>
+              </GridContainer>
             </GridItem>
-            <GridItem md={12} lg={2}>
-              <div style={{ display: 'flex' }}>
-                <Image
-                  src="/logo-white.svg"
-                  alt="logo"
-                  width="166"
-                  height="82"
-                />
-              </div>
-            </GridItem>
-            <GridItem md={12} lg={8}>
+            <GridItem md={12} lg={10}>
               <GridContainer spacing={4}>
                 <GridItem md={6} lg={3}>
                   <Typography fontWeight="500" fontSize={16} color="white">
@@ -108,6 +117,12 @@ export default function Index({ data }: { data: Footer }) {
                   <Link className={styles.link} href={'questions'}>
                     <Typography color="white" fontWeight="400" fontSize="16">
                       Preguntas Frecuentes
+                    </Typography>
+                  </Link>
+
+                  <Link className={styles.link} href={'technical-faqs'}>
+                    <Typography color="white" fontWeight="400" fontSize="16">
+                      ¿Tienes problemas con tu cuenta única?
                     </Typography>
                   </Link>
                 </GridItem>

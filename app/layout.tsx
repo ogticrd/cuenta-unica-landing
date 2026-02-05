@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
 import { Content } from './types';
 
@@ -10,11 +10,14 @@ import { ThemeProvider } from './theme';
 
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
-  title: 'Cuenta única',
-  description: 'Sistema de cuenta única del gobierno dominicano',
+  title: 'Cuenta Única',
+  description: 'Sistema de Cuenta Única del Estado Dominicano',
 };
 
 export default async function RootLayout({
@@ -30,7 +33,7 @@ export default async function RootLayout({
 
   return (
     <html lang="es">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <ThemeProvider>
           <OfficialHeader />
           <Navbar data={content.navbar} />

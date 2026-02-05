@@ -1,10 +1,15 @@
+.main_content{
+background: #6db0e2;
+  width: 100%;
+  margin: 89px 0;
+  border-radius: 10px;
+}
+
 .content {
+  position: relative;
   width: 100%;
   min-height: 629px;
   padding: 50px 0;
-  border-radius: 10px;
-  margin: 89px 0;
-  background: #6db0e2;
   color: white;
   display: flex;
   align-items: center;
@@ -28,6 +33,7 @@
   background-repeat: no-repeat;
   margin-top: -230px;
   z-index: 0;
+  opacity: .250;
 }
 
 @media only screen and (max-width: 1100px) {

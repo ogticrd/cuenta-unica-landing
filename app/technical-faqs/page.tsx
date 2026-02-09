@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
+import Fuse from 'fuse.js';
 import { Container } from '../components/container';
 import { Typography } from '../components/typography';
 import BasicAccordion from '../components/accordion';
@@ -35,14 +36,25 @@ export default function FAQPage() {
     fetchQuestions();
   }, []);
 
+  const fuse = useMemo(
+    () =>
+      new Fuse(questions, {
+        keys: ['question', 'answer'],
+        threshold: 0.35,
+        ignoreLocation: true,
+        ignoreDiacritics: true,
+      }),
+    [questions],
+  );
+
   const handleSearch = (query: string) => {
-    const lowerQuery = query.toLowerCase();
-    const filtered = questions.filter(
-      (q) =>
-        q.question.toLowerCase().includes(lowerQuery) ||
-        q.answer.toLowerCase().includes(lowerQuery),
-    );
-    setFilteredQuestions(filtered);
+    if (!query.trim()) {
+      setFilteredQuestions(questions);
+      return;
+    }
+
+    const results = fuse.search(query);
+    setFilteredQuestions(results.map((r) => r.item));
   };
 
   return (

@@ -48,6 +48,9 @@ export const theme = createTheme({
     h5: {
       fontWeight: '600',
     },
+    h6: {
+      fontSize: '18px',
+    },
     body1: {
       fontSize: '18px',
       color: '#433E3E',

@@ -96,45 +96,6 @@ export async function GET() {
     },
     {
       id: 3,
-      question: '¿Se puede eliminar una cuenta?',
-      answer: `
-        <p>
-    Actualmente, <strong>no es posible eliminar una cuenta de manera manual</strong>
-    desde la plataforma.
-  </p>
-
-  <p>
-    Si desea solicitar la eliminación permanente de su cuenta, debe realizar la solicitud
-    a través de correo electrónico siguiendo los pasos a continuación:
-  </p>
-
-  <ol>
-    <li>
-      <strong>Redactar un correo electrónico:</strong><br />
-      Envíe un correo a la dirección
-      <a href="mailto:ayudaogtic@ogtic.gob.do">ayudaogtic@ogtic.gob.do</a>.
-    </li>
-
-    <li>
-      <strong>Explicar el motivo de la solicitud:</strong><br />
-      En el correo, indique claramente las razones por las cuales desea eliminar su cuenta.
-      Esto permitirá que el equipo de soporte evalúe su solicitud.
-    </li>
-
-    <li>
-      <strong>Esperar confirmación:</strong><br />
-      Una vez recibida la solicitud, el equipo correspondiente se pondrá en contacto
-      para informar sobre el estado del proceso.
-    </li>
-  </ol>
-
-  <p>
-    <em>Nota: La eliminación de la cuenta, una vez aprobada y ejecutada, es irreversible.</em>
-  </p>
-      `,
-    },
-    {
-      id: 4,
       question: '¿Qué hago si no recuerdo mi correo electrónico?',
       answer: `
 <p>
@@ -168,19 +129,19 @@ export async function GET() {
       `,
     },
     {
-      id: 5,
+      id: 4,
       question: '¿Qué puedo hacer si no me llega el código de verificación?',
       answer: `
         <p>Si no recibe el código de verificación:</p>
-        <ul>
+        <ol>
           <li>Revise su carpeta de <strong>Spam</strong> o <strong>Correo no deseado</strong>.</li>
           <li>Espere unos minutos y solicite un nuevo código.</li>
           <li>Verifique que su correo electrónico esté escrito correctamente.</li>
-        </ul>
+        </ol>
       `,
     },
     {
-      id: 6,
+      id: 5,
       question: '¿Cómo puedo reportar un error con mi cuenta?',
       answer: `
 <p>
@@ -218,7 +179,7 @@ export async function GET() {
       images: ['/faqs/6/6-step-1.png'],
     },
     {
-      id: 7,
+      id: 6,
       question: '¿Cómo puedo cambiar mi contraseña?',
       answer: `
         <p>Para cambiar su contraseña actual:</p>
@@ -254,7 +215,7 @@ export async function GET() {
       images: ['/faqs/7/7-step-1.png'],
     },
     {
-      id: 8,
+      id: 7,
       question: '¿Puedo agregar un segundo factor de autenticación?',
       answer: `
          <p>
@@ -277,6 +238,45 @@ export async function GET() {
       Recomendamos mantenerse atento a las actualizaciones de la plataforma para
       conocer la disponibilidad de nuevas funciones de seguridad.
     </em>
+  </p>
+      `,
+    },
+    {
+      id: 8,
+      question: '¿Se puede eliminar una cuenta?',
+      answer: `
+        <p>
+    Actualmente, <strong>no es posible eliminar una cuenta de manera manual</strong>
+    desde la plataforma.
+  </p>
+
+  <p>
+    Si desea solicitar la eliminación permanente de su cuenta, debe realizar la solicitud
+    a través de correo electrónico siguiendo los pasos a continuación:
+  </p>
+
+  <ol>
+    <li>
+      <strong>Redactar un correo electrónico:</strong><br />
+      Envíe un correo a la dirección
+      <a href="mailto:ayudaogtic@ogtic.gob.do">ayudaogtic@ogtic.gob.do</a>.
+    </li>
+
+    <li>
+      <strong>Explicar el motivo de la solicitud:</strong><br />
+      En el correo, indique claramente las razones por las cuales desea eliminar su cuenta.
+      Esto permitirá que el equipo de soporte evalúe su solicitud.
+    </li>
+
+    <li>
+      <strong>Esperar confirmación:</strong><br />
+      Una vez recibida la solicitud, el equipo correspondiente se pondrá en contacto
+      para informar sobre el estado del proceso.
+    </li>
+  </ol>
+
+  <p>
+    <em>Nota: La eliminación de la cuenta, una vez aprobada y ejecutada, es irreversible.</em>
   </p>
       `,
     },

@@ -60,7 +60,11 @@ export default function BasicAccordion({ questions }: AccordionProps) {
             <AccordionDetails>
               <div
                 dangerouslySetInnerHTML={{ __html: item.answer }}
-                style={{ fontFamily: 'inherit' }}
+                style={{
+                  fontSize: '16px',
+                  overflowWrap: 'anywhere',
+                  wordBreak: 'break-word',
+                }}
               />
               {item.images && item.images.length > 0 && (
                 <div style={{ marginTop: '16px' }}>

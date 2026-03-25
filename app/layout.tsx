@@ -33,7 +33,7 @@ export default async function RootLayout({
       <body className={inter.className}>
         <ThemeProvider>
           <OfficialHeader />
-          <Navbar data={content.navbar} />
+          <Navbar />
           {children}
           <Footer data={content.footer} />
         </ThemeProvider>

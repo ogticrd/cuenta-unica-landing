@@ -5,6 +5,7 @@ import Description from './components/description';
 import Benefits from './components/benefits';
 import StepsToRegister from './components/steps-to-register';
 import OnlineServices from './components/online-services';
+import CtaFaq from './components/cta-faq';
 
 export default async function Home() {
   const contentUrl = process.env.CONTENT_JSON_URL as string;
@@ -20,6 +21,7 @@ export default async function Home() {
       <Benefits data={content.benefits} />
       <StepsToRegister data={content.stepsToRegister} />
       <OnlineServices data={content.onlineServices} />
+      <CtaFaq />
     </div>
   );
 }

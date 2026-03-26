@@ -6,7 +6,13 @@ import {
 } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { red } from '@mui/material/colors';
+import { Poppins } from 'next/font/google';
 import React from 'react';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+});
 
 export const theme = createTheme({
   palette: {
@@ -26,31 +32,39 @@ export const theme = createTheme({
   },
 
   typography: {
-    fontFamily: ['Poppins', 'sans-serif'].join(','),
+    fontFamily: poppins.style.fontFamily,
     h1: {
       fontWeight: '600',
-      fontSize: '60px',
-      lineHeight: '80px',
+      fontSize: '50px',
+      lineHeight: '70px',
       color: '#003876',
     },
     h2: {
-      fontWeight: '500',
-      fontSize: '60px',
+      fontWeight: '600',
+      fontSize: '50px',
       lineHeight: '90px',
-      color: '#000000',
+      color: '#6DB0E2',
+    },
+    h5: {
+      fontWeight: '600',
+    },
+    h6: {
+      fontSize: '18px',
     },
     body1: {
-      fontSize: '16px',
+      fontSize: '18px',
       color: '#433E3E',
       fontWeight: '400',
+      lineHeight: '35px',
     },
     body2: {
-      fontSize: '16px',
-      color: '#000000',
+      fontSize: '18px',
+      color: '#433E3E',
       fontWeight: '400',
+      lineHeight: '35px',
     },
     subtitle2: {
-      fontWeight: '600',
+      fontWeight: '700',
       fontSize: '32px',
     },
   },

@@ -36,7 +36,7 @@ export default async function RootLayout({
       <body className={poppins.className}>
         <ThemeProvider>
           <OfficialHeader />
-          <Navbar data={content.navbar} />
+          <Navbar />
           {children}
           <Footer data={content.footer} />
         </ThemeProvider>

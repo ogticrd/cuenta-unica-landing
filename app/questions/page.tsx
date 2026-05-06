@@ -1,14 +1,9 @@
 import { Container } from '../components/container';
+import { generalFaqQuestions } from '../content/general-faq';
 import { Typography } from '../components/typography';
-import { Content, Questions } from '../types';
+import { Questions } from '../types';
 
-export default async function QuestionsPage() {
-  const contentUrl = process.env.CONTENT_JSON_URL as string;
-  const response = await fetch(contentUrl, {
-    cache: 'no-store',
-  });
-  const { questions }: Content = await response.json();
-
+export default function QuestionsPage() {
   return (
     <div style={{ padding: '60px 0' }}>
       <Container maxWidth="md">
@@ -16,7 +11,7 @@ export default async function QuestionsPage() {
           Preguntas frecuentes
         </Typography>
 
-        {questions.map((item: Questions, index) => (
+        {generalFaqQuestions.map((item: Questions, index) => (
           <div key={index}>
             <Typography color="primary" variant="h5" gutterBottom>
               {item?.question}
